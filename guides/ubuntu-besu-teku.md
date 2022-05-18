@@ -10,14 +10,16 @@ It will cover the setup process to be ready for the Ropsten Ethereum testnet mer
 
 ### Ubuntu Updates
 
-```sudo apt update && sudo apt upgrade
+```
+sudo apt update && sudo apt upgrade
 sudo apt dist-upgrade && sudo apt autoremove
 sudo reboot
 ```
 
 ### Firewall Settings
 
-```sudo apt install ufw
+```
+sudo apt install ufw
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow 30303
@@ -34,14 +36,16 @@ sudo apt install default-jre default-jdk
 
 ### Create User
 
-```sudo useradd --no-create-home --shell /bin/false besu
+```
+sudo useradd --no-create-home --shell /bin/false besu
 mkdir /var/lib/besu/
 sudo chown -R besu:besu /var/lib/besu/
 ```
 
 ### Download and Build Besu
 
-```git clone -b main https://github.com/hyperledger/besu --recursive
+```
+git clone -b main https://github.com/hyperledger/besu --recursive
 cd besu
 ./gradlew installDist distTar
 sudo cp -a build/install/besu/. /usr/local/bin/besu
@@ -56,7 +60,8 @@ sudo nano /etc/systemd/system/besu.service
 
 Copy and paste the following into editor, save:
 
-```[Unit]
+```
+[Unit]
 Description=Ethereum Besu execution client
 After=network.target
 Before=network.target
@@ -83,7 +88,8 @@ WantedBy=multi-user.target
 
 ### Enable Systemctl
 
-```sudo systemctl daemon-reload
+```
+sudo systemctl daemon-reload
 sudo systemctl start besu
 sudo systemctl status besu
 sudo systemctl enable besu
