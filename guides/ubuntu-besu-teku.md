@@ -11,7 +11,9 @@ It will cover the setup process to be ready for the Ropsten Ethereum testnet mer
 ### Ubuntu Updates
 
 `sudo apt update && sudo apt upgrade
+
 sudo apt dist-upgrade && sudo apt autoremove
+
 sudo reboot`
 
 ### Firewall Settings
