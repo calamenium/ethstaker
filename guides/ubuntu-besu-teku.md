@@ -28,7 +28,9 @@ sudo ufw status numbered
 
 ### Install Java
 
-`sudo apt install default-jre default-jdk`
+```
+sudo apt install default-jre default-jdk
+```
 
 ### Create User
 
@@ -48,7 +50,9 @@ cd ~
 
 ### Create Systemd File
 
-`sudo nano /etc/systemd/system/besu.service`
+```
+sudo nano /etc/systemd/system/besu.service
+```
 
 Copy and paste the following into editor, save:
 
