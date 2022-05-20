@@ -33,6 +33,11 @@ sudo ufw status numbered
 ```
 sudo apt install default-jre default-jdk
 ```
+### Install Git
+
+```
+sudo apt install git-all
+```
 
 ### Create User
 
